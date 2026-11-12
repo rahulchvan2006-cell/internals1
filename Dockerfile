@@ -27,7 +27,7 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 USER appuser
 
 # Copy executable jar from builder stage
-COPY --from=builder /app/target/student-grade-calculator-1.0.0.jar app.jar
+COPY --from=builder /app/target/maven-github-demo-1.0-SNAPSHOT.jar app.jar
 
 # Run the Student Grade Calculator application
 ENTRYPOINT ["java", "-jar", "app.jar"]
